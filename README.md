@@ -1,4 +1,4 @@
-# FIFL 프론트엔드 개발자 사전 과제 (Carousel)
+# Vue Carousel
 
 ## 스택
 - Vue.js (vue-cli v3)
