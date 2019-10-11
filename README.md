@@ -1,29 +1,18 @@
-# vue-carousel2
+# FIFL 프론트엔드 개발자 사전 과제 (Carousel)
 
-## Project setup
+## 스택
+- Vue.js (vue-cli v3)
+- Pug (Jade)
+- Sass(Scss)
+- Vuex
+- es-lint (Airbnb)
+
+## 프로젝트 설치
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+## 프로젝트 실행
 ```
-yarn run serve
+yarn serve
 ```
-
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

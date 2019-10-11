@@ -1,28 +1,41 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template lang="pug">
+  #app
+    h3.title Carousel
+    Carousel
+    DeleteForm
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import { createNamespacedHelpers } from 'vuex';
+import dataJSON from '@/assets/data.json';
+
+import DeleteForm from '@/components/DeleteForm.vue';
+import Carousel from '@/components/Carousel.vue';
+
+const { mapActions } = createNamespacedHelpers('carousel');
 
 export default {
   name: 'app',
   components: {
-    HelloWorld,
+    DeleteForm,
+    Carousel,
+  },
+  methods: {
+    ...mapActions(['setSlides']),
+  },
+  created() {
+    this.setSlides(dataJSON);
   },
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding: 40px 0;
+}
+.title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
 }
 </style>
